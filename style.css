@@ -11,7 +11,7 @@
   width: 100%;
   background-color: azure;
   font-family: "Concert One", cursive;
-  padding: 40px;
+  padding: 10px;
 }
 .container h2 {
   text-align: center;
@@ -43,12 +43,12 @@
   background-position: center;
   background-size: contain;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 .result_p {
   margin: 50px auto;
   text-align: center;
-
   font-size: 40px;
   padding: 5px;
   display: none;
