@@ -79,8 +79,6 @@ submitBtn.addEventListener("click", function () {
     resultP.style.display = "block";
     resultP.innerHTML = "You loss";
   }
-
-  console.log(winResult);
 });
 
 resetBtn.addEventListener("click", function () {
