@@ -26,6 +26,7 @@ function generateImage() {
 
 let dragOver = "";
 let dragLeave = "";
+let clickEvent = "";
 
 boxes.forEach((box) => {
   box.addEventListener("dragover", (e) => {
@@ -48,6 +49,23 @@ boxes.forEach((box) => {
     generateImage();
     dragOver = "";
     dragLeave = "";
+  });
+
+  box.addEventListener("click", function (e) {
+    box.style.backgroundColor = "green";
+    if (clickEvent === "") {
+      clickEvent = box.classList[1];
+    } else {
+      const secondEvent = box.classList[1];
+      const temp = imageArray[clickEvent - 1];
+      imageArray[clickEvent - 1] = imageArray[secondEvent - 1];
+      imageArray[secondEvent - 1] = temp;
+      generateImage();
+      clickEvent = "";
+      boxes.forEach((element) => {
+        element.style.backgroundColor = "rgb(187, 255, 232)";
+      });
+    }
   });
 });
 
